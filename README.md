@@ -15,4 +15,9 @@
    
    ```bash
    composer install
+4. Запустите сервер:
+
+ ```bash
+    symfony server:start
+    ```
 
