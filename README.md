@@ -8,9 +8,11 @@
    git clone https://github.com/ox1e/Image-Scraper.git
 2. Перейдите в директорию проекта:
 
-cd Image-Scraper
+   ```bash
+   cd Image-Scraper
 
 3. Установите зависимости:
-
-composer install
+   
+   ```bash
+   composer install
 
