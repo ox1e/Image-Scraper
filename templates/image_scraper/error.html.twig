@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ошибка{% endblock %}
+
+{% block body %}
+    <h1>Произошла ошибка</h1>
+    <p>{{ error }}</p>
+    <a href="{{ path('home') }}">Вернуться назад</a>
+{% endblock %}

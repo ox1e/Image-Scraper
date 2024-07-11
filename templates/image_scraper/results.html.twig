@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Результаты{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ ('css/results.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Результаты</h1>
+    <div class="image-grid">
+        {% for image in images %}
+            <div class="image-item">
+                <img src="{{ image.url }}" alt="Image" onclick="openModal('{{ image.url }}')">
+            </div>
+        {% endfor %}
+    </div>
+    <h1>На странице обнаружено {{ totalImages }} изображений на {{ totalSize | number_format(2) }} MB</h1>
+
+    <!-- Модальное окно для отображения увеличенного изображения -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImg">
+        </div>
+    </div>
+    <script src="{{ ('js/script.js') }}"></script>
+{% endblock %}

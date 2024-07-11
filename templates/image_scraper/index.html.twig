@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ ('css/index.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <form action="{{ path('scrape') }}" method="post">
+        <div class="form__group">
+            <input type="text" name="url" class="form__input" id="url" placeholder="Введите URL" required pattern="https?://.+" title="Введите корректный URL, начинающийся с http:// или https://">
+            <button type="submit" class="button">GO</button>
+        </div>
+    </form>
+{% endblock %}
