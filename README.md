@@ -18,4 +18,4 @@
 4. Запустите сервер:
 
    ```bash
-    symfony server:start
+    symfony serve
